@@ -27,6 +27,72 @@ footer{
     grid-area: footer;
 }
 
+.contenedor{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header" "section section" 
+    "footer footer";
+}
+
+header{
+    grid-area: header;
+}
+section section{
+    grid-area: section;
+
+}
+footer{
+    grid-area: footer;
+}
+
+.encabezado ul{
+	list-style: none;
+    text-align: center;
+    background-color: black;
+}
+
+ul> li{
+	position: relative;
+	display: inline-block;
+}
+
+ul > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+ul li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.encabezado li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
 
 #titulo{
     height: 400px;
